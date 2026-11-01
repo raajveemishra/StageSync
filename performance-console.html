@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Performance Console — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/console-immersive.css">
+</head>
+<body data-page="console">
+  <div id="site-nav"></div>
+
+  <main class="performance-page">
+    <div class="performance-shell">
+      <header class="performance-opening">
+        <div class="performance-opening__topline">
+          <span><i class="performance-live-dot"></i> BACKSTAGE / LIVE PERFORMANCE CONTROL</span>
+          <span>STAGESYNC <b>·</b> DEPARTMENT 03</span>
+        </div>
+        <div class="performance-opening__main">
+          <div>
+            <p class="performance-eyebrow">THE MOMENT IS YOURS TO CALL</p>
+            <h1>When the cue<br><em>is yours.</em></h1>
+            <p class="performance-opening__copy">One command at a time. Keep the sequence in sight, hold when the moment needs it, and let the show move when it's ready.</p>
+          </div>
+          <div class="performance-opening__art" aria-hidden="true">
+            <div class="performance-orbit performance-orbit--outer"></div>
+            <div class="performance-orbit performance-orbit--inner"></div>
+            <div class="performance-art__spotlight"></div>
+            <div class="performance-art__stage">
+              <span class="performance-art__curtain"></span>
+              <span class="performance-art__beam performance-art__beam--left"></span>
+              <span class="performance-art__beam performance-art__beam--right"></span>
+              <span class="performance-art__stage-mark">GO</span>
+              <span class="performance-art__stage-caption">ON OPERATOR CALL</span>
+            </div>
+            <span class="performance-art__fig">FIG. 04 / LIVE CUE CONTROL</span>
+          </div>
+        </div>
+        <div class="performance-opening__foot">
+          <span>03 — THE LIVE RUN</span>
+          <span>FOCUS. TIMING. TRUST.</span>
+        </div>
+      </header>
+
+      <section class="performance-console">
+        <div class="performance-console__topline">
+          <div>
+            <p class="performance-eyebrow">THE OPERATOR'S DESK</p>
+            <h2 id="console-title">Stage Manager's<br><em>console.</em></h2>
+          </div>
+          <div class="performance-console__folio">
+            <span>RUN STATUS</span>
+            <b>LIVE / MANUAL</b>
+            <small>COMMANDS VALIDATED BY DFA</small>
+          </div>
+        </div>
+
+        <div class="console">
+          <section class="console__main" aria-live="polite">
+            <div class="console__status">
+              <span id="status" class="status"></span>
+              <span id="position" class="muted"></span>
+            </div>
+
+            <div class="performance-current-label">
+              <span class="performance-eyebrow">NOW CALLING</span>
+              <span class="performance-current-label__line"></span>
+              <span class="performance-current-label__index">01 / CURRENT CUE</span>
+            </div>
+            <div id="now"></div>
+
+            <div class="next">
+              <div class="performance-next-heading">
+                <p class="performance-eyebrow">UP NEXT</p>
+                <span>STANDBY</span>
+              </div>
+              <div id="next"></div>
+            </div>
+
+            <div class="console__controls" aria-label="Performance commands">
+              <button type="button" id="btn-go" class="btn btn--primary btn--go">GO <span>↗</span></button>
+              <button type="button" id="btn-hold" class="btn">HOLD <span>Ⅱ</span></button>
+              <button type="button" id="btn-resume" class="btn">RESUME <span>▶</span></button>
+            </div>
+            <p class="performance-controls-note">COMMANDS ARE PROCESSED IN SEQUENCE. INVALID TRANSITIONS ARE REJECTED.</p>
+          </section>
+
+          <aside class="console__side">
+            <section class="performance-stack-section">
+              <div class="performance-side-heading">
+                <div><p class="performance-eyebrow">THE RUNNING ORDER</p><h3>Cue stack<span>.</span></h3></div>
+                <span class="performance-side-index">A / 01</span>
+              </div>
+              <ol class="stack" id="stack"></ol>
+            </section>
+
+            <section class="performance-log-section">
+              <div class="performance-side-heading">
+                <div><p class="performance-eyebrow">COMMAND HISTORY</p><h3>Show log<span>.</span></h3></div>
+                <span class="performance-side-index">B / 02</span>
+              </div>
+              <ul class="log" id="log"></ul>
+              <button type="button" id="btn-reset" class="link-btn">↺ &nbsp; RESET SHOW</button>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="performance-closing">
+        <span>✳</span>
+        <p>THE STAGE IS SET. THE NEXT MOVE IS YOURS.</p>
+        <small>STAGESYNC · PERFORMANCE CONSOLE</small>
+      </footer>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/console.js"></script>
+</body>
+</html>

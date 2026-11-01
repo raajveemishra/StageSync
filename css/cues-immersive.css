@@ -1,0 +1,98 @@
+/* StageSync Cue Sheet — editorial master-document styling.
+   Existing cue-sheet.js IDs, filter controls and table semantics are preserved. */
+:root {
+  --cs-bg:#10090d; --cs-panel:#1a0e14; --cs-rose:#d995a0;
+  --cs-rose-light:#edc2c5; --cs-ivory:#f4eadc; --cs-muted:#aa9994;
+  --cs-line:rgba(244,234,220,.15);
+  --cs-serif:"Bodoni Moda","Times New Roman",serif;
+  --cs-italic:"Playfair Display",Georgia,serif;
+  --cs-sans:"DM Sans",Arial,sans-serif; --cs-mono:"DM Mono",monospace;
+}
+body[data-page="cues"] { background:var(--cs-bg); color:var(--cs-ivory); font-family:var(--cs-sans); }
+body[data-page="cues"] .nav { background:rgba(12,7,10,.96); border-bottom-color:var(--cs-line); }
+body[data-page="cues"] .nav__brand { font:500 2rem var(--cs-serif); letter-spacing:-.06em; }
+body[data-page="cues"] .nav__brand span { color:var(--cs-rose); font-style:italic; }
+body[data-page="cues"] .nav__link { font:.63rem var(--cs-mono); letter-spacing:.13em; }
+body[data-page="cues"] .footer { background:#0b0709; border-top-color:var(--cs-line); }
+.cues-page { flex:1; overflow:hidden; background:radial-gradient(ellipse at 83% 0%,rgba(99,35,54,.17),transparent 32%),var(--cs-bg); }
+.cues-shell { max-width:1500px; margin:0 auto; padding:0 clamp(22px,5.5vw,84px) 62px; }
+.cues-opening { padding:34px 0 24px; border-bottom:1px solid var(--cs-line); }
+.cues-opening__topline,.cues-opening__foot { display:flex; justify-content:space-between; align-items:center; gap:18px; color:#a99391; font:.57rem var(--cs-mono); letter-spacing:.14em; }
+.cues-opening__topline b { color:var(--cs-rose); }
+.cues-live-dot { display:inline-block; width:7px; height:7px; margin-right:9px; border-radius:50%; background:var(--cs-rose); box-shadow:0 0 12px var(--cs-rose); }
+.cues-opening__main { min-height:330px; display:grid; grid-template-columns:1fr .75fr; align-items:center; gap:4vw; padding:30px 0 24px; }
+.cues-eyebrow { color:var(--cs-rose); font:.58rem var(--cs-mono); letter-spacing:.16em; }
+.cues-opening h1 { margin:22px 0 18px; color:var(--cs-ivory); font:500 clamp(3.9rem,7vw,6.7rem)/.86 var(--cs-serif); letter-spacing:-.075em; }
+.cues-opening h1 em { display:inline-block; margin:13px 0 0 4vw; color:var(--cs-rose); font:italic 500 clamp(3rem,5.5vw,5.2rem)/1 var(--cs-italic); letter-spacing:-.065em; white-space:nowrap; }
+.cues-opening__copy { max-width:465px; margin-top:24px; color:#b9a9a3; font-size:.92rem; line-height:1.85; }
+.cues-opening__art { position:relative; min-height:290px; display:grid; place-items:center; }
+.cues-orbit { position:absolute; border:1px solid rgba(217,149,160,.18); border-radius:50%; aspect-ratio:1; }
+.cues-orbit--outer { width:min(88%,330px); box-shadow:0 0 0 23px rgba(217,149,160,.018),0 0 0 54px rgba(217,149,160,.012); }
+.cues-orbit--inner { width:min(63%,235px); border-style:dashed; transform:rotate(24deg); }
+.cues-art__sheet { position:relative; width:min(78%,285px); padding:18px 19px 22px; border:1px solid rgba(217,149,160,.38); background:linear-gradient(145deg,rgba(255,255,255,.045),transparent 50%),#1a0d14; box-shadow:0 22px 60px rgba(0,0,0,.35); transform:rotate(-3deg); }
+.cues-art__overline { display:block; color:#b99a9b; font:.48rem var(--cs-mono); letter-spacing:.14em; }
+.cues-art__rule { display:block; height:1px; margin:13px 0 8px; background:var(--cs-line); }
+.cues-art__row { display:grid; grid-template-columns:45px 1fr 24px; align-items:center; gap:9px; padding:11px 0; border-bottom:1px solid rgba(244,234,220,.09); }
+.cues-art__row b { color:var(--cs-rose-light); font:500 1.25rem var(--cs-serif); }
+.cues-art__row i { color:#b9a9a3; font: .48rem var(--cs-mono); letter-spacing:.1em; font-style:normal; }
+.cues-art__row small { color:#8e777a; font:.48rem var(--cs-mono); text-align:right; }
+.cues-art__stamp { position:absolute; right:-18px; bottom:-22px; display:grid; place-items:center; width:62px; height:62px; border:1px solid rgba(217,149,160,.45); border-radius:50%; background:#24121a; color:var(--cs-rose-light); text-align:center; font:italic .8rem/1 var(--cs-italic); transform:rotate(12deg); }
+.cues-opening__figure { position:absolute; right:0; bottom:0; color:#8d7779; font:.48rem var(--cs-mono); letter-spacing:.13em; }
+.cues-opening__foot { padding-top:15px; border-top:1px solid var(--cs-line); }
+.cues-document { margin-top:48px; padding:clamp(22px,4vw,48px); border:1px solid var(--cs-line); background:linear-gradient(150deg,rgba(255,255,255,.025),transparent 38%),var(--cs-panel); box-shadow:0 25px 75px rgba(0,0,0,.16); }
+.cues-document__head { display:flex; justify-content:space-between; align-items:flex-start; gap:25px; padding-bottom:30px; border-bottom:1px solid var(--cs-line); }
+.cues-document__head h2 { margin:12px 0 13px; color:var(--cs-ivory); font:500 clamp(2.8rem,5vw,4.7rem)/.91 var(--cs-serif); letter-spacing:-.065em; }
+.cues-document__head h2 em { color:var(--cs-rose); font:italic .88em var(--cs-italic); }
+.cues-document__subtitle { color:#a99591; font-size:.82rem; line-height:1.7; }
+.cues-document__folio { display:flex; flex-direction:column; align-items:flex-end; gap:6px; padding:12px 14px; border:1px solid rgba(217,149,160,.25); color:#a48c8d; font:.48rem var(--cs-mono); letter-spacing:.13em; white-space:nowrap; }
+.cues-document__folio b { color:var(--cs-rose-light); font:500 1.4rem var(--cs-serif); letter-spacing:0; }
+.cues-document__folio small { color:#79696b; font-size:.43rem; }
+.cues-filter-heading { display:flex; justify-content:space-between; gap:16px; margin:27px 0 12px; color:#987f80; font:.49rem var(--cs-mono); letter-spacing:.12em; }
+body[data-page="cues"] .cues-filters { display:flex; flex-wrap:wrap; gap:7px; margin:0 0 38px; padding:0; border:0; background:none; }
+body[data-page="cues"] .cues-filters .filter { display:flex; align-items:center; gap:11px; padding:10px 13px; border:1px solid rgba(244,234,220,.16); border-radius:0; background:transparent; color:#b7a5a0; cursor:pointer; font:.56rem var(--cs-mono); letter-spacing:.07em; transition:background .2s,border-color .2s,color .2s; }
+body[data-page="cues"] .cues-filters .filter:hover { border-color:rgba(217,149,160,.5); color:var(--cs-ivory); }
+body[data-page="cues"] .cues-filters .filter.is-active { border-color:var(--cs-rose); background:rgba(217,149,160,.12); color:var(--cs-ivory); }
+body[data-page="cues"] .cues-filters .filter small { display:grid; place-items:center; min-width:19px; height:19px; padding:0 4px; border-radius:50%; background:rgba(217,149,160,.12); color:var(--cs-rose-light); font:.48rem var(--cs-mono); }
+.cues-table-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:19px; }
+.cues-table-heading h3 { margin-top:8px; color:var(--cs-ivory); font:500 clamp(2.5rem,4vw,3.7rem)/.9 var(--cs-serif); letter-spacing:-.06em; }
+.cues-table-heading h3 em { color:var(--cs-rose); font:italic .88em var(--cs-italic); }
+.cues-table-heading__note { padding-bottom:5px; color:#8f7c7b; font:.48rem var(--cs-mono); letter-spacing:.12em; }
+body[data-page="cues"] .cues-table-wrap { overflow-x:auto; border:1px solid var(--cs-line); background:#140b10; }
+body[data-page="cues"] .cues-table { width:100%; min-width:850px; border-collapse:collapse; color:var(--cs-ivory); }
+body[data-page="cues"] .cues-table thead { background:#24131c; }
+body[data-page="cues"] .cues-table th { padding:14px 15px; border-bottom:1px solid rgba(217,149,160,.35); color:#c5aaa8; text-align:left; white-space:nowrap; font:.49rem var(--cs-mono); font-weight:400; letter-spacing:.13em; text-transform:uppercase; }
+body[data-page="cues"] .cues-table td { padding:15px; border-bottom:1px solid rgba(244,234,220,.09); color:#c7b8ae; vertical-align:top; font-size:.78rem; line-height:1.6; }
+body[data-page="cues"] .cues-table tbody tr:not(.table__group):hover { background:rgba(217,149,160,.045); }
+body[data-page="cues"] .cues-table .table__group td { padding:11px 15px; border-bottom:1px solid rgba(217,149,160,.2); background:rgba(217,149,160,.065); color:var(--cs-rose-light); font:.53rem var(--cs-mono); letter-spacing:.13em; text-transform:uppercase; }
+body[data-page="cues"] .cues-table .cue-id { color:var(--cs-rose-light); font:500 .75rem var(--cs-mono); white-space:nowrap; }
+body[data-page="cues"] .cues-table .cue-title { color:var(--cs-ivory); font:500 1.12rem/1.2 var(--cs-serif); }
+body[data-page="cues"] .cues-table .cue-detail { margin-top:4px; color:#a99591; font-size:.7rem; line-height:1.6; }
+body[data-page="cues"] .cues-table .muted { color:#a18d89; }
+body[data-page="cues"] .cues-table .tag { border-radius:0; border:1px solid rgba(217,149,160,.28); background:rgba(217,149,160,.07); color:var(--cs-rose-light); font:.48rem var(--cs-mono); letter-spacing:.05em; }
+.cues-document__foot { display:flex; justify-content:space-between; gap:15px; padding-top:15px; color:#8f7c7b; font:.47rem var(--cs-mono); letter-spacing:.12em; }
+.cues-document__foot b { margin-left:8px; color:var(--cs-rose); }
+.cues-closing { display:flex; flex-direction:column; align-items:center; gap:10px; padding:48px 0 10px; text-align:center; }
+.cues-closing > span { color:var(--cs-rose); font-size:1.4rem; }
+.cues-closing p { color:var(--cs-ivory); font:.56rem var(--cs-mono); letter-spacing:.16em; }
+.cues-closing small { color:#887477; font:.46rem var(--cs-mono); letter-spacing:.14em; }
+@media(max-width:850px) {
+  .cues-opening__main { grid-template-columns:1fr .65fr; }
+}
+@media(max-width:650px) {
+  .cues-shell { padding:0 18px 45px; }
+  .cues-opening__topline span:last-child,.cues-opening__foot span:last-child,.cues-filter-heading span:last-child { display:none; }
+  .cues-opening__main { grid-template-columns:1fr; padding:35px 0 15px; }
+  .cues-opening h1 { font-size:clamp(3.7rem,15vw,5.5rem); }
+  .cues-opening h1 em { margin-left:5vw; font-size:clamp(2.8rem,11.5vw,4.2rem); }
+  .cues-opening__art { min-height:225px; }
+  .cues-document { margin-top:28px; padding:22px 15px; }
+  .cues-document__head { gap:12px; }
+  .cues-document__folio { padding:9px; }
+  .cues-document__folio span,.cues-document__folio small { display:none; }
+  .cues-document__head h2 { font-size:2.8rem; }
+  .cues-table-heading__note { display:none; }
+  .cues-document__foot span:last-child { text-align:right; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-page="cues"] *,body[data-page="cues"] *::before,body[data-page="cues"] *::after { animation-duration:.01ms!important;transition-duration:.01ms!important; }
+}

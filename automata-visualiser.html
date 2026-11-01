@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Automata Lab — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/automata-immersive.css">
+</head>
+<body data-page="automata">
+  <div id="site-nav"></div>
+
+  <main class="automata-page">
+    <div class="automata-shell">
+      <header class="automata-opening">
+        <div class="automata-opening__topline">
+          <span><i class="automata-live-dot"></i> BACKSTAGE / THEORY OF COMPUTATION LAB</span>
+          <span>STAGESYNC <b>·</b> DEPARTMENT 05</span>
+        </div>
+        <div class="automata-opening__main">
+          <div>
+            <p class="automata-eyebrow">WHERE THE SHOW MEETS THE SCIENCE</p>
+            <h1>Every move<br>has a <em>state.</em></h1>
+            <p class="automata-opening__copy">Step inside the logic running underneath StageSync. Trace the finite automaton that governs performance commands, then watch a pushdown automaton keep the production's nested structure in order.</p>
+          </div>
+          <div class="automata-opening__art" aria-hidden="true">
+            <div class="automata-orbit automata-orbit--outer"></div>
+            <div class="automata-orbit automata-orbit--inner"></div>
+            <div class="automata-art__diagram">
+              <span class="automata-art__caption">A SYSTEM IN MOTION</span>
+              <svg viewBox="0 0 420 230" role="presentation">
+                <defs>
+                  <marker id="auto-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#d995a0" stroke-width="1"/></marker>
+                </defs>
+                <path d="M94 112 C145 32 270 32 326 112" fill="none" stroke="#8c5361" stroke-width="1.2" marker-end="url(#auto-arrow)"/>
+                <path d="M326 135 C268 210 151 210 94 135" fill="none" stroke="#8c5361" stroke-width="1.2" marker-end="url(#auto-arrow)"/>
+                <path d="M94 124 L326 124" stroke="#60404a" stroke-dasharray="4 6"/>
+                <circle cx="94" cy="124" r="34" fill="#24131b" stroke="#d995a0" stroke-width="1.4"/>
+                <circle cx="326" cy="124" r="34" fill="#24131b" stroke="#d995a0" stroke-width="1.4"/>
+                <circle cx="326" cy="124" r="28" fill="none" stroke="#d995a0" stroke-width="1"/>
+                <text x="94" y="130" text-anchor="middle" fill="#f4eadc" font-family="DM Mono" font-size="16">q0</text>
+                <text x="326" y="130" text-anchor="middle" fill="#f4eadc" font-family="DM Mono" font-size="16">q1</text>
+                <text x="210" y="48" text-anchor="middle" fill="#d995a0" font-family="DM Mono" font-size="11" letter-spacing="2">GO</text>
+                <text x="210" y="205" text-anchor="middle" fill="#d995a0" font-family="DM Mono" font-size="11" letter-spacing="2">RESET</text>
+                <circle cx="210" cy="124" r="4" fill="#edc2c5"/>
+              </svg>
+              <div class="automata-art__footer"><span>INPUT</span><span>TRANSITION</span><span>STATE</span></div>
+            </div>
+            <span class="automata-opening__figure">FIG. 06 / ABSTRACT DFA PATH</span>
+          </div>
+        </div>
+        <div class="automata-opening__foot">
+          <span>05 — THE AUTOMATA LAB</span>
+          <span>INPUT. TRANSITION. RESULT.</span>
+        </div>
+      </header>
+
+      <section class="automata-lab">
+        <div class="automata-lab__heading">
+          <div><p class="automata-eyebrow">CHOOSE YOUR MACHINE</p><h2>Two models.<br><em>One production.</em></h2></div>
+          <p class="automata-lab__note">Each playground runs an isolated trace. Experiment freely — your live performance and saved production data remain untouched.</p>
+        </div>
+
+        <div class="automata-tabs" role="tablist" aria-label="Automata modes">
+          <button class="automata-tab is-active" type="button" data-tab="fa" role="tab" aria-selected="true">
+            <span class="automata-tab__number">01</span><span><small>FINITE AUTOMATON</small><b>DFA / Performance</b></span><span class="automata-tab__arrow">↗</span>
+          </button>
+          <button class="automata-tab" type="button" data-tab="pda" role="tab" aria-selected="false">
+            <span class="automata-tab__number">02</span><span><small>PUSHDOWN AUTOMATON</small><b>PDA / Structure</b></span><span class="automata-tab__arrow">↗</span>
+          </button>
+        </div>
+
+        <section class="automata-panel is-active" id="panel-fa" role="tabpanel">
+          <div class="automata-panel__intro">
+            <span class="automata-panel__tag">MACHINE 01 / DFA</span>
+            <h3>What happens <em>next?</em></h3>
+            <p>The DFA reads performance commands one by one. Every accepted input moves the machine to its next state; a rejected command leaves the operational position unchanged.</p>
+          </div>
+          <div class="automata-grid">
+            <div class="automata-card automata-card--input">
+              <div class="automata-card__heading"><span class="automata-card__index">A</span><div><p class="automata-eyebrow">INPUT SEQUENCE</p><h2>Call the commands.</h2></div></div>
+              <label class="field">
+                <span class="field__label">SELECT PRODUCTION</span>
+                <select class="input" id="fa-production"></select>
+              </label>
+              <label class="field">
+                <span class="field__label">COMMANDS TO TRACE</span>
+                <textarea class="input input--area automata-input" id="fa-input" placeholder="GO, GO, HOLD, GO, RESUME, GO, RESET"></textarea>
+              </label>
+              <p class="automata-help">Valid commands: GO · HOLD · RESUME · RESET. Separate commands with commas or spaces. Invalid commands are useful test inputs too.</p>
+              <div class="automata-actions">
+                <button class="btn btn--primary" id="fa-run" type="button">Run DFA trace <span>↗</span></button>
+                <button class="link-btn" id="fa-clear" type="button">Clear ↺</button>
+              </div>
+            </div>
+            <div class="automata-output">
+              <div id="fa-verdict" class="automata-result">
+                <div class="automata-result__title">Awaiting input</div>
+                <p>Run a command sequence to see each state transition.</p>
+              </div>
+              <div class="automata-card automata-card--trace">
+                <div class="automata-card__heading"><span class="automata-card__index">B</span><div><p class="automata-eyebrow">STATE TRANSITIONS</p><h2>Follow the machine.</h2></div></div>
+                <div id="fa-states" class="automata-state-row">
+                  <div class="automata-state"><small>Initial state</small><strong>q0</strong></div>
+                </div>
+                <div id="fa-trace" class="automata-trace"><p class="automata-empty">Your DFA trace will appear here.</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="automata-panel" id="panel-pda" role="tabpanel">
+          <div class="automata-panel__intro">
+            <span class="automata-panel__tag">MACHINE 02 / PDA</span>
+            <h3>Does the structure <em>hold?</em></h3>
+            <p>The PDA checks nested acts, scenes and cue groups using a stack. Open a structure to push it; close it to match and pop the most recently opened element.</p>
+          </div>
+          <div class="automata-grid">
+            <div class="automata-card automata-card--input">
+              <div class="automata-card__heading"><span class="automata-card__index">A</span><div><p class="automata-eyebrow">STRUCTURAL INPUT</p><h2>Build the nesting.</h2></div></div>
+              <label class="field">
+                <span class="field__label">OPEN / CLOSE SYMBOLS</span>
+                <textarea class="input input--area automata-input" id="pda-input" placeholder="OPEN_ACT, OPEN_SCENE, OPEN_GROUP, CLOSE_GROUP, CLOSE_SCENE, CLOSE_ACT"></textarea>
+              </label>
+              <p class="automata-help">Symbols: OPEN_ACT / CLOSE_ACT · OPEN_SCENE / CLOSE_SCENE · OPEN_GROUP / CLOSE_GROUP. The stack begins with the bottom marker $.</p>
+              <div class="automata-actions">
+                <button class="btn btn--primary" id="pda-run" type="button">Run PDA trace <span>↗</span></button>
+                <button class="link-btn" id="pda-clear" type="button">Clear ↺</button>
+              </div>
+              <div class="automata-pda-note"><span>STACK RULE</span><p>A closing event must match the most recently opened structure. The sequence is accepted only when the stack returns to its bottom marker.</p></div>
+            </div>
+            <div class="automata-output">
+              <div id="pda-verdict" class="automata-result">
+                <div class="automata-result__title">Awaiting input</div>
+                <p>Run a symbol sequence to watch the stack.</p>
+              </div>
+              <div class="automata-card automata-card--trace">
+                <div class="automata-card__heading"><span class="automata-card__index">B</span><div><p class="automata-eyebrow">STACK OPERATIONS</p><h2>Watch it build.</h2></div></div>
+                <p class="automata-stack-caption">BOTTOM → TOP</p>
+                <div id="pda-stack" class="stack-view"><span class="stack-token is-bottom">$</span></div>
+                <div id="pda-trace" class="automata-trace"><p class="automata-empty">Your PDA trace will appear here.</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="automata-closing">
+        <span>✳</span>
+        <p>THE DFA KEEPS THE SHOW MOVING. THE PDA KEEPS ITS STRUCTURE.</p>
+        <small>STAGESYNC · THEORY OF COMPUTATION LAB</small>
+      </footer>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/automata.js"></script>
+</body>
+</html>

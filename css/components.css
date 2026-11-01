@@ -1,0 +1,151 @@
+/* ==========================================================
+   StageSync — components.css
+   Reusable pieces: buttons, cards, forms, tables, tags, filters
+   ========================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 30px;
+  font-size: 0.76rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 400;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--ivory);
+  cursor: pointer;
+  transition: background var(--t), border-color var(--t), color var(--t);
+}
+.btn:hover:not(:disabled) { border-color: var(--ivory); }
+.btn--primary { background: var(--wine); border-color: var(--wine); }
+.btn--primary:hover:not(:disabled) { background: var(--wine-bright); border-color: var(--wine-bright); }
+.btn--small { padding: 10px 20px; font-size: 0.7rem; }
+.btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.link-btn {
+  background: none; border: 0; cursor: pointer;
+  padding: 6px 0;
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ivory-dim);
+  border-bottom: 1px solid transparent;
+  transition: color var(--t), border-color var(--t);
+}
+.link-btn:hover { color: var(--ivory); border-bottom-color: var(--wine-bright); }
+
+/* ---------- Section heading ---------- */
+.section-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 14px; margin-bottom: 8px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.section-head a {
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ivory-dim);
+  transition: color var(--t);
+}
+.section-head a:hover { color: var(--ivory); }
+
+/* ---------- Status pill ---------- */
+.status {
+  display: inline-flex; align-items: center;
+  padding: 4px 12px;
+  font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  color: var(--ivory-dim);
+  white-space: nowrap;
+}
+.status--live { border-color: var(--wine-bright); color: #e6b7bd; background: rgba(110, 31, 46, 0.25); }
+
+/* ---------- Forms ---------- */
+.input {
+  width: 100%;
+  background: transparent;
+  border: 0; border-bottom: 1px solid var(--line-strong);
+  padding: 10px 0;
+  color: var(--ivory);
+  outline: none;
+  transition: border-color var(--t);
+}
+.input:focus { border-color: var(--wine-bright); }
+.input::placeholder { color: var(--muted); }
+select.input {
+  appearance: none; -webkit-appearance: none; cursor: pointer;
+  padding-right: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23b9af9d' stroke-width='1.2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 4px center;
+}
+select.input option { background: var(--surface); color: var(--ivory); }
+.input--area {
+  border: 1px solid var(--line-strong);
+  padding: 14px 16px; min-height: 96px; resize: vertical; line-height: 1.6;
+}
+.input--area:focus { border-color: var(--wine-bright); }
+
+.field { display: block; margin-bottom: 28px; }
+.field__label {
+  display: block; margin-bottom: 6px;
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}
+
+.add-form { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
+.add-form .input { font-size: 0.88rem; padding: 8px 0; }
+
+/* ---------- Cards and rows ---------- */
+.card { background: var(--surface); border: 1px solid var(--line); padding: 28px; }
+
+.row {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding var(--t), background var(--t);
+}
+a.row:hover { padding-left: 14px; background: linear-gradient(90deg, rgba(110, 31, 46, 0.18), transparent); }
+.row h3 { font-size: 1.5rem; }
+.row p { font-size: 0.85rem; }
+.row__meta { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-size: 0.82rem; }
+
+.empty { padding: 36px 0; color: var(--muted); font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; }
+
+/* ---------- Cue-type tags ---------- */
+.tag {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ivory-dim);
+  white-space: nowrap;
+}
+.tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--dot, var(--muted)); }
+.tag--lighting { --dot: #d9b97a; }
+.tag--sound { --dot: #b8404f; }
+.tag--props { --dot: #8a8174; }
+.tag--actor { --dot: #d6a3a8; }
+
+/* ---------- Filters ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.filter {
+  background: none; border: 0; cursor: pointer;
+  padding: 12px 20px; margin-bottom: -1px;
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid transparent;
+  transition: color var(--t), border-color var(--t);
+}
+.filter:hover { color: var(--ivory); }
+.filter.is-active { color: var(--ivory); border-bottom-color: var(--wine-bright); }
+.filter small { margin-left: 8px; color: var(--muted); font-size: 0.7rem; letter-spacing: 0; }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); }
+.table { width: 100%; min-width: 860px; border-collapse: collapse; }
+.table th {
+  text-align: left; padding: 16px 20px;
+  font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--muted);
+  background: var(--surface); border-bottom: 1px solid var(--line-strong);
+}
+.table td { padding: 16px 20px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 0.9rem; }
+.table tbody tr { transition: background var(--t); }
+.table tbody tr:hover { background: rgba(110, 31, 46, 0.14); }
+.table tbody tr:last-child td { border-bottom: 0; }
+.table .table__group td {
+  padding: 22px 20px 12px; background: var(--black);
+  font-family: var(--font-serif); font-size: 1.3rem; color: var(--ivory);
+  border-bottom: 1px solid var(--line-strong);
+}
+.table .table__group:hover { background: var(--black); }
+.cue-id { font-family: var(--font-serif); font-size: 1.25rem; white-space: nowrap; }
+.cue-title { color: var(--ivory); }
+.cue-detail { color: var(--muted); font-size: 0.84rem; margin-top: 2px; }

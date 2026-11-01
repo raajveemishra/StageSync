@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Production Studio — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/studio-immersive.css">
+</head>
+<body data-page="studio">
+  <div id="site-nav"></div>
+
+  <main class="studio-page">
+    <div class="studio-shell">
+      <header class="studio-opening">
+        <div class="studio-opening__topline">
+          <span><i class="studio-live-dot"></i> BACKSTAGE / PRODUCTION WORKSPACE</span>
+          <span>STAGESYNC <b>·</b> DEPARTMENT 01</span>
+        </div>
+        <div class="studio-opening__content">
+          <div>
+            <p class="studio-eyebrow">EVERY SHOW STARTS SOMEWHERE</p>
+            <h1>Build the<br><em>world on stage.</em></h1>
+            <p class="studio-opening__copy">Shape the production from its first act to its final cue. Give every scene, every group and every moving part a place to belong.</p>
+          </div>
+          <div class="studio-opening__art" aria-hidden="true">
+            <div class="studio-art__ring studio-art__ring--one"></div>
+            <div class="studio-art__ring studio-art__ring--two"></div>
+            <div class="studio-art__stage">
+              <span class="studio-art__curtain"></span>
+              <span class="studio-art__beam studio-art__beam--left"></span>
+              <span class="studio-art__beam studio-art__beam--right"></span>
+              <span class="studio-art__spot"></span>
+              <span class="studio-art__floor"></span>
+              <span class="studio-art__caption">THE WORK<br>BEGINS HERE</span>
+            </div>
+            <span class="studio-art__index">FIG. 02 / PRODUCTION STRUCTURE</span>
+          </div>
+        </div>
+        <div class="studio-opening__foot">
+          <span>01 — PRODUCTION ARCHITECTURE</span>
+          <span>ONE SHOW. MANY MOVING PARTS.</span>
+        </div>
+      </header>
+
+      <div class="studio-workspace">
+        <aside class="studio-rail">
+          <div class="studio-rail__heading">
+            <p class="studio-eyebrow">THE COMPANY</p>
+            <h2>Your<br><em>productions.</em></h2>
+            <span class="studio-rail__note">SELECT A SHOW TO BEGIN</span>
+          </div>
+          <div class="studio-rail__list" id="production-list"></div>
+          <div class="studio-create">
+            <span class="studio-create__index">+ NEW ENTRY</span>
+            <form class="add-form" id="new-production" autocomplete="off">
+              <input class="input" name="entry" placeholder="Production title" aria-label="New production title">
+              <button class="link-btn" type="submit">Create production <span>↗</span></button>
+            </form>
+          </div>
+          <div class="studio-rail__foot"><span>STAGESYNC / ARCHIVE</span><span>01—∞</span></div>
+        </aside>
+
+        <section class="studio-workarea" id="studio-main" aria-live="polite"></section>
+      </div>
+
+      <footer class="studio-bottomline">
+        <span>STRUCTURE IS THE BEGINNING OF THE SHOW.</span>
+        <span>STAGESYNC · PRODUCTION STUDIO</span>
+      </footer>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/studio.js"></script>
+</body>
+</html>

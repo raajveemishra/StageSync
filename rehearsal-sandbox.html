@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Rehearsal Sandbox — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/sandbox-immersive.css">
+</head>
+<body data-page="sandbox">
+  <div id="site-nav"></div>
+
+  <main class="sandbox-page">
+    <div class="sandbox-shell">
+      <header class="sandbox-opening">
+        <div class="sandbox-opening__topline">
+          <span><i class="sandbox-live-dot"></i> BACKSTAGE / REHEARSAL LABORATORY</span>
+          <span>STAGESYNC <b>·</b> DEPARTMENT 04</span>
+        </div>
+        <div class="sandbox-opening__main">
+          <div>
+            <p class="sandbox-eyebrow">MAKE THE MISTAKES HERE, NOT ON STAGE</p>
+            <h1>Try it before<br><em>the curtain rises.</em></h1>
+            <p class="sandbox-opening__copy">Build a cue sequence, test its order, and catch anything that doesn't belong. This is your space to experiment before the real performance begins.</p>
+          </div>
+          <div class="sandbox-opening__art" aria-hidden="true">
+            <div class="sandbox-orbit sandbox-orbit--outer"></div>
+            <div class="sandbox-orbit sandbox-orbit--inner"></div>
+            <div class="sandbox-art__board">
+              <span class="sandbox-art__label">REHEARSAL / SEQUENCE TEST</span>
+              <div class="sandbox-art__flow">
+                <span class="sandbox-art__node sandbox-art__node--good">LX 01</span>
+                <i></i>
+                <span class="sandbox-art__node sandbox-art__node--good">SQ 01</span>
+                <i></i>
+                <span class="sandbox-art__node sandbox-art__node--bad">LX 09</span>
+              </div>
+              <span class="sandbox-art__verdict">CHECK THE SEQUENCE <b>↗</b></span>
+            </div>
+            <span class="sandbox-opening__figure">FIG. 05 / VALIDATION PATH</span>
+          </div>
+        </div>
+        <div class="sandbox-opening__foot">
+          <span>04 — THE REHEARSAL ROOM</span>
+          <span>TEST. TRACE. REFINE.</span>
+        </div>
+      </header>
+
+      <section class="sandbox-workbench">
+        <div class="sandbox-workbench__heading">
+          <div><p class="sandbox-eyebrow">THE EXPERIMENT</p><h2>Build your<br><em>sequence.</em></h2></div>
+          <span class="sandbox-workbench__index">WORKBENCH / 01</span>
+        </div>
+
+        <div class="sandbox">
+          <section class="sandbox__builder">
+            <div class="sandbox__builder-head">
+              <span class="sandbox-step-number">01</span>
+              <div><p class="sandbox-eyebrow">INPUT</p><h3>Set the running order.</h3></div>
+            </div>
+
+            <form id="sandbox-form">
+              <label class="field">
+                <span class="field__label">START WITH A PRESET</span>
+                <select class="input" id="preset"></select>
+              </label>
+
+              <label class="field">
+                <span class="field__label">YOUR CUE SEQUENCE</span>
+                <textarea class="input input--area" id="sequence" rows="4" placeholder="LX1, SQ1, PR1, AC1"></textarea>
+                <small class="sandbox-field-note">Separate cue IDs with commas. Example: LX1, SQ1, PR1.</small>
+              </label>
+
+              <div class="sandbox__actions">
+                <button class="btn btn--primary" type="submit">Test sequence <span>↗</span></button>
+                <button class="link-btn" type="button" id="clear">Clear ↺</button>
+              </div>
+            </form>
+
+            <div class="sandbox__cue-picker">
+              <div class="sandbox__cue-picker-head"><p class="sandbox-eyebrow">CUE LIBRARY</p><span>ADD A CUE TO YOUR SEQUENCE</span></div>
+              <div class="chips" id="chips"></div>
+            </div>
+
+            <div class="sandbox__legend">
+              <span><i class="sandbox-legend-dot sandbox-legend-dot--good"></i> VALID STEP</span>
+              <span><i class="sandbox-legend-dot sandbox-legend-dot--bad"></i> REJECTED STEP</span>
+            </div>
+          </section>
+
+          <section class="sandbox__results-panel" aria-live="polite">
+            <div class="sandbox__results-head">
+              <div><span class="sandbox-step-number">02</span><p class="sandbox-eyebrow">VALIDATION OUTPUT</p><h3>Read the<br><em>room.</em></h3></div>
+              <span class="sandbox-workbench__index">RESULT / 02</span>
+            </div>
+            <section id="result" aria-live="polite"></section>
+          </section>
+        </div>
+      </section>
+
+      <footer class="sandbox-closing">
+        <span>✳</span>
+        <p>A GOOD REHEARSAL MAKES A BETTER OPENING NIGHT.</p>
+        <small>STAGESYNC · REHEARSAL SANDBOX</small>
+      </footer>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/sandbox.js"></script>
+</body>
+</html>

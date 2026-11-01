@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Backstage Dashboard — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/dashboard-immersive.css">
+</head>
+<body data-page="dashboard">
+  <div id="site-nav"></div>
+
+  <main class="dashboard-page">
+    <div class="dashboard-shell">
+      <header class="dash-opening">
+        <div class="dash-opening__topline">
+          <span><i class="dash-live-dot"></i> BACKSTAGE / PRODUCTION OVERVIEW</span>
+          <span>STAGESYNC <b>·</b> CALLBOARD 01</span>
+        </div>
+        <div class="dash-opening__main">
+          <div>
+            <p class="dash-eyebrow">THE WORK BEHIND THE WONDER</p>
+            <h1>The season<br><em>at a glance.</em></h1>
+            <p class="dash-opening__description">Every production has a thousand moving parts. Here's where yours stand before the curtain rises.</p>
+          </div>
+          <div class="dash-opening__aside" aria-hidden="true">
+            <div class="dash-opening__orbit dash-opening__orbit--outer"></div>
+            <div class="dash-opening__orbit dash-opening__orbit--inner"></div>
+            <div class="dash-opening__cross">✳</div>
+            <div class="dash-opening__aside-label"><span>THE COMPANY</span><b>IN MOTION</b><small>PRODUCTIONS · REHEARSALS · CUES</small></div>
+            <span class="dash-opening__serial">SS / 026</span>
+          </div>
+        </div>
+        <div class="dash-opening__bottom">
+          <span>01 — CURRENT SEASON</span>
+          <span>KEEP THE DETAILS CLOSE. KEEP THE MAGIC ALIVE.</span>
+        </div>
+      </header>
+
+      <section class="dash-stat-section" aria-label="Production summary">
+        <div class="dash-section-kicker"><span>01 / THE NUMBERS</span><span>A QUICK READ OF THE SEASON</span></div>
+        <div class="stats" id="stats" aria-label="Summary"></div>
+      </section>
+
+      <div class="dash-workbench">
+        <section class="dash-panel dash-panel--productions">
+          <div class="dash-panel__heading">
+            <div><p class="dash-eyebrow">THE COMPANY</p><h2>Productions<span>.</span></h2></div>
+            <a class="dash-inline-link" href="production-studio.html">OPEN STUDIO <span>↗</span></a>
+          </div>
+          <p class="dash-panel__intro">The stories currently taking shape.</p>
+          <div id="productions" class="dash-production-list"></div>
+        </section>
+
+        <section class="dash-panel dash-panel--rehearsals">
+          <div class="dash-panel__heading">
+            <div><p class="dash-eyebrow">ON THE CALLBOARD</p><h2>Upcoming<br><em>rehearsals.</em></h2></div>
+            <span class="dash-calendar-mark" aria-hidden="true">✳</span>
+          </div>
+          <p class="dash-panel__intro">The next moments on the schedule.</p>
+          <div id="rehearsals" class="dash-rehearsal-list"></div>
+        </section>
+      </div>
+
+      <section class="dash-departments">
+        <div class="dash-departments__heading">
+          <div><p class="dash-eyebrow">02 / YOUR BACKSTAGE PASS</p><h2>Everything in<br><em>its right place.</em></h2></div>
+          <p>Pick up where the work needs you. Each department is one step closer to opening night.</p>
+        </div>
+        <div class="dash-shortcuts">
+          <a class="dash-shortcut" href="production-studio.html"><span class="dash-shortcut__num">01</span><span class="dash-shortcut__icon">✳</span><span class="dash-shortcut__title">Production<br><em>Studio</em></span><span class="dash-shortcut__foot">BUILD THE SHOW <b>↗</b></span></a>
+          <a class="dash-shortcut" href="cue-sheet.html"><span class="dash-shortcut__num">02</span><span class="dash-shortcut__icon">≋</span><span class="dash-shortcut__title">Cue<br><em>Sheet</em></span><span class="dash-shortcut__foot">KEEP IT IN ORDER <b>↗</b></span></a>
+          <a class="dash-shortcut" href="performance-console.html"><span class="dash-shortcut__num">03</span><span class="dash-shortcut__icon">◉</span><span class="dash-shortcut__title">Performance<br><em>Console</em></span><span class="dash-shortcut__foot">CALL THE MOMENT <b>↗</b></span></a>
+          <a class="dash-shortcut" href="rehearsal-sandbox.html"><span class="dash-shortcut__num">04</span><span class="dash-shortcut__icon">⌁</span><span class="dash-shortcut__title">Rehearsal<br><em>Sandbox</em></span><span class="dash-shortcut__foot">TEST THE SEQUENCE <b>↗</b></span></a>
+          <a class="dash-shortcut" href="automata-visualiser.html"><span class="dash-shortcut__num">05</span><span class="dash-shortcut__icon">⟲</span><span class="dash-shortcut__title">Automata<br><em>Lab</em></span><span class="dash-shortcut__foot">EXPLORE THE LOGIC <b>↗</b></span></a>
+        </div>
+      </section>
+
+      <section class="dash-closing">
+        <span class="dash-closing__ornament">✳</span>
+        <p>GOOD PRODUCTIONS ARE BUILT IN THE DETAILS.</p>
+        <span>BACK TO THE WORK.</span>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

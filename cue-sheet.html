@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <title>Cue Sheet — StageSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/cues-immersive.css">
+</head>
+<body data-page="cues">
+  <div id="site-nav"></div>
+
+  <main class="cues-page">
+    <div class="cues-shell">
+      <header class="cues-opening">
+        <div class="cues-opening__topline">
+          <span><i class="cues-live-dot"></i> BACKSTAGE / MASTER CUE DOCUMENT</span>
+          <span>STAGESYNC <b>·</b> DEPARTMENT 02</span>
+        </div>
+        <div class="cues-opening__main">
+          <div>
+            <p class="cues-eyebrow">EVERY MOMENT HAS ITS MARK</p>
+            <h1>The art of<br><em>the right cue.</em></h1>
+            <p class="cues-opening__copy">One shared reference for every department. Lighting, sound, props and performers — all moving in the same story, in the right order.</p>
+          </div>
+          <div class="cues-opening__art" aria-hidden="true">
+            <div class="cues-orbit cues-orbit--outer"></div>
+            <div class="cues-orbit cues-orbit--inner"></div>
+            <div class="cues-art__sheet">
+              <span class="cues-art__overline">RUNNING ORDER / 01</span>
+              <span class="cues-art__rule"></span>
+              <span class="cues-art__row"><b>LX</b><i>LIGHTING</i><small>01</small></span>
+              <span class="cues-art__row"><b>SQ</b><i>SOUND</i><small>02</small></span>
+              <span class="cues-art__row"><b>PR</b><i>PROPS</i><small>03</small></span>
+              <span class="cues-art__row"><b>ACT</b><i>PERFORMANCE</i><small>04</small></span>
+              <span class="cues-art__stamp">IN<br>ORDER</span>
+            </div>
+            <span class="cues-opening__figure">FIG. 03 / CUE SEQUENCE</span>
+          </div>
+        </div>
+        <div class="cues-opening__foot">
+          <span>02 — THE RUNNING ORDER</span>
+          <span>ONE DOCUMENT. THE WHOLE COMPANY.</span>
+        </div>
+      </header>
+
+      <section class="cues-document">
+        <div class="cues-document__head">
+          <div>
+            <p class="cues-eyebrow">THE MASTER DOCUMENT</p>
+            <h2 id="cue-title">Every cue,<br><em>in script order.</em></h2>
+            <p id="cue-subtitle" class="cues-document__subtitle">Lighting, sound, props and actor cues.</p>
+          </div>
+          <div class="cues-document__folio">
+            <span>STAGESYNC</span>
+            <b>CS—01</b>
+            <small>PRODUCTION COPY</small>
+          </div>
+        </div>
+
+        <div class="cues-filter-heading">
+          <span>FILTER BY DEPARTMENT</span>
+          <span>SELECT A CATEGORY TO REFINE THE SHEET</span>
+        </div>
+        <div class="filters cues-filters" id="filters" role="tablist" aria-label="Filter by cue type"></div>
+
+        <div class="cues-table-heading">
+          <div><span class="cues-eyebrow">THE SEQUENCE</span><h3>Called in<br><em>order.</em></h3></div>
+          <span class="cues-table-heading__note">CUE REGISTER / ALL DEPARTMENTS</span>
+        </div>
+
+        <div class="table-wrap cues-table-wrap">
+          <table class="table cues-table">
+            <thead>
+              <tr>
+                <th>Cue</th>
+                <th>Type</th>
+                <th>Scene</th>
+                <th>Description</th>
+                <th>Trigger</th>
+                <th>Follows</th>
+              </tr>
+            </thead>
+            <tbody id="cue-rows"></tbody>
+          </table>
+        </div>
+        <div class="cues-document__foot">
+          <span>END OF EXTRACT</span>
+          <span>VERIFY THE ORDER BEFORE CALLING THE SHOW <b>✳</b></span>
+        </div>
+      </section>
+      <footer class="cues-closing">
+        <span>✳</span>
+        <p>THE MAGIC IS IN THE TIMING.</p>
+        <small>STAGESYNC · CUE SHEET</small>
+      </footer>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cue-sheet.js"></script>
+</body>
+</html>

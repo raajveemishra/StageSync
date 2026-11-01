@@ -1,6 +1,6 @@
 /* StageSync API adapter: Flask is the source of truth; selection is shared across pages. */
 const StageSyncAPI = (() => {
-  const API_BASE = "http://127.0.0.1:5000/api";
+  const API_BASE = "https://stagesync-backend.onrender.com";
   const SELECTION_KEY = "stagesync.selectedProductionId";
 
   async function request(path, options = {}) {
